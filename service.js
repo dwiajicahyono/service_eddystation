@@ -3,6 +3,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const dbkalimantan = require('./models/kalimantan_models');
+const dbpetengoran = require('./models/petengoran_models')
 const route = require('./routes/user.routes');
 const mqttClient = require('./mqttConfigs');  // Impor konfigurasi MQTT
 
@@ -29,6 +30,7 @@ app.use(bodyParser.json());
 
 // if you run again and don't wanna lose your data
 dbkalimantan.sequelize.sync();
+dbpetengoran.sequelize.sync();
 
 
 
