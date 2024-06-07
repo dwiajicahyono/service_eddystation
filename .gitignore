@@ -1,2 +1,5 @@
 .env
 node_modules/
+.nvmrc
+start_service.sh
+package-lock.json
